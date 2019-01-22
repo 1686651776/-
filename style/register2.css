@@ -1,0 +1,196 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+blockquote,
+q {
+    quotes: none;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body{
+    background: #e5edf2;
+}
+.box{
+    width: 1100px;
+    height: 972px;
+    background: url(../images/zhucebj.jpg) no-repeat;
+    background-size: 100% 100%;
+    margin: 120px auto 120px auto;
+    box-shadow: 0 85px 68px -58px rgba(99,120,149,.55);
+    padding: 80px 239px 126px;
+    font-size: 18px;
+    color: #4b4350;
+} 
+.box .wrap h1{
+    color: #6cc4d2;
+    font-size: 35px;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+.box .wrap img{
+    margin-bottom: 55px;
+}
+.box .wrap p {
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+.box .wrap span{
+    color: #1e79c1;
+}
+.box .wrap .tip{
+    background: #e5edf2;
+    padding: 20px 16px;
+    margin-top: 70px;
+    text-align: center;
+}
+.box .wrap button{
+    display: block;
+    width: 218px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+    margin: 45px auto 0 auto;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 23px;
+    background: #6cc3d3;
+}
+.box .wrap button:hover{
+    background: #89cfdc;
+}
+.box .help{
+    width: 600px;
+    margin-top: 65px;
+}
+.box .help b{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.box .help li{
+    font-size: 17px;
+    line-height: 20px;
+}
