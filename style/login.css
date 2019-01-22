@@ -1,0 +1,160 @@
+body{
+background: #e5edf2;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */ 
+    color: #ddd;
+    font-size: 20px;
+    } 
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+    color: #ddd;  
+    font-size: 20px; 
+    } 
+input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    color: #ddd; 
+    font-size: 20px;
+    }    
+input:-ms-input-placeholder { /* Internet Explorer 10+ */  
+    color: #ddd; 
+    font-size: 20px;
+    }
+input{
+    outline:none;
+    }
+.box{
+    width: 1145px;
+    height: 694px;
+    box-shadow: 0 85px 68px -58px rgba(99,120,149,.55);
+    margin: 15px auto 0 auto;
+    background: #fff;
+    position: relative;
+}
+.box::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.box .box-rightimg{
+    width: 466px;
+    height: 694px;
+    float: right;
+}
+.box .box-rightimg img{
+    width: 100%;
+    height: 100%;
+}
+.box .box-leftform{
+    width: 679px;
+    height: 694px;
+    float: left;
+}
+.box .box-leftform h1{
+    margin: 70px 0 0 0;
+    font-size: 30px;
+    color: #6cc4d2;
+    text-align: center;
+}
+.box .box-leftform form{
+    color: #4b4350;
+    height: 300px;
+    margin-top: 60px;
+}
+.box .box-leftform form p{
+    width: 20px;
+    height: 35px;
+    border-bottom: 1px solid #4b4350;
+    padding: 5px 1px 4px 1px;
+    float: left;
+}
+.box .box-leftform form .user input{
+    margin-bottom: 40px;
+}
+.box .box-leftform form input{
+    display: block;
+    width: 320px;
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #4b4350;
+    padding: 0 0 0 10px;
+}
+.box .box-leftform form .user{
+    margin-left: 170px;
+}
+.box .box-leftform form .pass{
+    margin-left: 170px;
+}
+.box .box-leftform form .pass a{
+    display: block;
+    margin: 5px 0 0 280px;
+    color: #6cc3d3;
+    font-size: 15px;
+}
+.box .box-leftform form .sign button{
+    display: block;
+    width: 218px;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    margin: 35px auto 0 auto;
+    font-size: 20px;
+    font-weight: 700;
+    background: #6cc3d3;
+    color: #fff;
+    border-radius: 22px;
+    transition: .3s box-shadow ease;
+}
+.box .box-leftform form .sign button:hover{
+    box-shadow: 0 4px 18px #ccc;
+}
+.box .box-leftform form .register a{
+    display: block;
+    width: 218px;
+    height: 43px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #6cc3d3;
+    text-align: center;
+    line-height: 39px;
+    cursor: pointer;
+    border: 1px solid #6cc3d3;
+    margin: 30px auto 0;
+    border-radius: 22px;
+    transition: .3s all ease;
+    background: #fff;
+}
+.box .box-leftform form .register a:hover{
+    box-shadow: 0 4px 18px #ccc;
+    background: #ffb37b;
+    border-color: #ffb37b;
+    color: #fff;
+}
+.box .box-leftform .box-or{
+    width: 304px;
+    height: 12px;
+    background: url(../images/or.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 35px 0 0 188px;
+}
+.box .box-leftform .box-zfb a{
+    display: block;
+    width: 62px;
+    height: 62px;
+    background: url(../images/alipay.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 45px auto 0 auto;
+}
+.box .box-leftform .tip{
+    width: 415px;
+    margin: 35px auto 0;
+    text-align: center;
+    color: #b1b1b1;
+    font-size: 12px;
+}
+.box .box-footer{
+    position: absolute;
+    margin: 20px 0 20px 0;
+    right: 0;
+    top: 100%;
+    color: #7e848d;
+    font-size: 12px;
+}
