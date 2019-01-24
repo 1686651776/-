@@ -85,3 +85,19 @@ input{
 .box .wrap form button:hover{
     background: #89cfdc;
 }
+.box .wrap form div span{
+    display: none;
+    color: #ff3c68;
+    font-size: 18px;
+}
+.box .wrap form div span.active{
+    display: inline-block;
+}
+.box .wrap form div i{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url(../images/tip.png) no-repeat;
+    background-size: 100% 100;
+    margin: 0 5px 0 0;
+}
