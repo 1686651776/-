@@ -15,30 +15,32 @@
         <div class="wrap">
             <h1>萌购帐号注册</h1>
             <img src="./images/1.png" alt="">
-            <form action="">
+            <form id="register">
                 <div>
                     <p>用户名/昵称</p>
-                    <input type="text" name="user" id="" class="Kurumi" placeholder="请输入2~30位用户名">
+                    <input type="text" id="username" class="Kurumi" name="username" placeholder="请输入2~30位用户名">
                     <span class="tip"><i></i>输入2~30位用户名</span>
+                    <span class="userrepeat"><i></i>该用户已经被注册</span>
                 </div>
                 <div>
                     <p>Email 邮箱</p>
-                    <input type="text" name="email" id="" class="Kurumi" placeholder="Email地址将用来激活账号及找回密码">
+                    <input type="text" id="email" class="Kurumi" name="email" placeholder="Email地址将用来激活账号及找回密码">
                     <span class="tip"><i></i>请输入正确的邮箱</span>
+                    <span class="emailrepeat"><i></i>该邮箱已经被注册</span>
                 </div>
                 <div>
                     <p>确认Email邮箱</p>
-                    <input type="text" name="" id="" class="Kotori" placeholder="请再次确认输入">
+                    <input type="text" name="" class="Kotori" placeholder="请再次确认输入">
                     <span class="Tip"><i></i>两次邮箱输入不一致</span>
                 </div>
                 <div>
                     <p>密码</p>
-                    <input type="password" name="pass" id="" class="Kurumi" placeholder="请输入6-12位密码">
+                    <input type="password" id="password" class="Kurumi" name="password" placeholder="请输入6-12位密码">
                     <span class="tip"><i></i>请输入6-12位密码</span>
                 </div>
                 <div>
                     <p>密码确认</p>
-                    <input type="password" name="" id="" class="Kotori" placeholder="请输入6位以上密码">
+                    <input type="password" name="" class="Kotori" placeholder="请输入6位以上密码">
                     <span class="Tip"><i></i>两次密码输入不一致</span>
                 </div>
                 <div class="check">
@@ -46,7 +48,7 @@
                     我同意并接受使用
                     <a href="https://www.030buy.net/help/05_04" target="_blank">《萌购隐私声明》</a>
                 </div>
-                <button>下一步</button>
+                <button id="btn">下一步</button>
             </form>
         </div>
     </div>
