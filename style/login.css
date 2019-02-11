@@ -28,6 +28,44 @@ input{
     background: #fff;
     position: relative;
 }
+.logininformation{
+    text-align: center;
+    width: 300px;
+    display: block!important;
+    height: 65px;
+    padding: 0 110px;
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    z-index: 99;
+    line-height: 65px;
+    vertical-align: middle;
+    opacity: 0;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 5px 20px 0 rgba(99,120,149,.31);
+    -webkit-transition: top 1s,opacity 1s;
+    transition: top 1s,opacity 1s;
+    margin-left: -145px;
+}
+.logininformation .close{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #ddd;
+}
+.logininformation .message{
+    color: rgba(102,117,127,.6)!important;
+}
+div.show{
+    top:0;
+    opacity: 1;
+}
 .box::after{
     content: "";
     display: block;
@@ -54,6 +92,7 @@ input{
     text-align: center;
 }
 .box .box-leftform form{
+    position: relative;
     color: #4b4350;
     height: 300px;
     margin-top: 60px;
@@ -65,8 +104,24 @@ input{
     padding: 5px 1px 4px 1px;
     float: left;
 }
+.box .box-leftform form p img{
+    transition: 0.5s;
+}
+.box .box-leftform form p img.show{
+    margin-top:-10px;
+}
+.box .box-leftform form .user{
+    height: 62px;
+}
 .box .box-leftform form .user input{
-    margin-bottom: 40px;
+    margin-bottom: 3px;
+}
+.box .box-leftform form .pass input{
+    margin-bottom: 3px;
+}
+.box .box-leftform form .pass{
+    margin-top: 30px;
+    position: relative;
 }
 .box .box-leftform form input{
     display: block;
@@ -83,11 +138,20 @@ input{
 .box .box-leftform form .pass{
     margin-left: 170px;
 }
+.box .box-leftform form .pass b{
+    position: absolute;
+    top: 42px;
+    left: 280px;
+}
 .box .box-leftform form .pass a{
-    display: block;
-    margin: 5px 0 0 280px;
+    display: inline-block;
     color: #6cc3d3;
     font-size: 15px;
+}
+.box .box-leftform form .loginbtn{
+    position: absolute;
+    left: 230px;
+    top: 145px;
 }
 .box .box-leftform form .sign button{
     display: block;
@@ -157,4 +221,20 @@ input{
     top: 100%;
     color: #7e848d;
     font-size: 12px;
+}
+.box .box-leftform form span{
+    display: none;
+    color: #ff3c68;
+    font-size: 18px;
+}
+.box .box-leftform form span.active{
+    display: inline-block;
+}
+.box .box-leftform form span i{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url(../images/tip.png) no-repeat;
+    background-size: 100% 100;
+    margin: 0 5px 0 0;
 }

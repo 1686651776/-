@@ -16,7 +16,7 @@
             <h1>萌购帐号注册</h1>
             <img src="./images/2.png" alt="">
             <p>系统已经发送一封标题为“<span>萌卡注册验证</span>”的邮件至
-                <span class="email">1241232131@qq.com</span>
+                <span class="email"></span>
                 您需要点击这封邮件中的激活链接，才可以完成您的萌卡账号注册。</p>
             <p class="tip">
                 注意： 无需激活即可登录和使用萌购（www.030buy.net）的全部功能
@@ -32,6 +32,16 @@
             </ul>
         </div>
     </div>
+    <script>
+            var email = document.querySelector(".email");
+            email.innerHTML = location.hash.replace("#","");
+            var btn = document.getElementsByTagName("button");
+            console.log(btn[0])
+            btn[0].addEventListener("click",start);
+            function start () {
+                window.location.href = "./login.html";
+            }
+    </script>
 </body>
 
 </html>

@@ -11,32 +11,41 @@
 </head>
 
 <body>
+    <div class="logininformation">
+        <span class="close">✖</span>
+        <span class="message">密码不正确</span>
+    </div>
     <div class="box">
         <div class="box-leftform">
             <h1>萌购帐号登录</h1>
             <form action="">
                 <div class="user">
-                    <p><img src="./images/user.png" alt=""></p>
-                    <input type="text" placeholder="用户名/邮箱">
+                    <p><img class="icon" src="./images/user.png" alt=""></p>
+                    <input type="text" id="username" name="username" placeholder="用户名/邮箱">
+                    <span class="logintip"><i></i>用户名/邮箱不能为空</span>
                 </div>
                 <div class="pass">
-                    <p><img src="./images/pass.png" alt=""></p>
-                    <input type="password" placeholder="请输入密码">
-                    <span>
+                    <p><img class="icon" src="./images/pass.png" alt=""></p>
+                    <input type="password" id="password" name="password" placeholder="请输入密码">
+                    <span class="logintip"><i></i>密码不能为空</span>
+                    <b class="Forgetpass">
                         <a href="https://user.030buy.net/auth/forgetPassword" target="_blank">忘记密码</a>
-                    </span>
+                    </b>
                 </div>
-                <div class="sign">
-                    <button>登录</button>
-                </div>
-                <div class="register">
-                    <a href="./register.html" target="_blank">注册</a>
+                <div class="loginbtn">
+                    <div class="sign">
+                        <button type="submit">登录</button>
+                    </div>
+                    <div class="register">
+                        <a href="./register.html" target="_blank">注册</a>
+                    </div>
                 </div>
             </form>
             <div class="box-or">
             </div>
             <div class="box-zfb">
-                <a href="https://auth.alipay.com/login/express.htm?goto=https%3A%2F%2Fmemberexprod.alipay.com%3A443%2Fauthorize%2FuserAuthQuickLoginAction.htm%3Fe_i_i_d%3D7ce125ee921199c7f9bf0958bf7adca4" target="_blank"></a>
+                <a href="https://auth.alipay.com/login/express.htm?goto=https%3A%2F%2Fmemberexprod.alipay.com%3A443%2Fauthorize%2FuserAuthQuickLoginAction.htm%3Fe_i_i_d%3D7ce125ee921199c7f9bf0958bf7adca4"
+                    target="_blank"></a>
             </div>
             <p class="tip">
                 萌购不向未成年人销售产品。我们向成年人销售儿童用品。<br>如果您不满18岁只有在父母或监护人参与的情况下您才能使用萌购。
@@ -49,6 +58,9 @@
             © 2016 All rights Reserced.
         </div>
     </div>
+    <script src="./javascript/libs/jquery.js"></script>
+    <script src="./javascript/login.js"></script>
+    <script src="./javascript/libs/common.js"></script>
 </body>
 
 </html>

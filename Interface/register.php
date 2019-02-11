@@ -11,7 +11,7 @@
     $username = @$_POST["username"];
     $email = @$_POST["email"];
     $password = @$_POST["password"];
-    
+    $password = md5($password);
     // $id = @$_POST["id"];
     // mysql_query("DELETE FROM errors WHERE id=$id");
     $inster_query = "INSERT INTO user ( username, email, password)

@@ -55,7 +55,6 @@
         if (this.tip[0].className === "tip" && this.tip[1].className === "tip" && this.tip[2].className === "tip" && this.Tip[0].className === "Tip" && this.Tip[1].className === "Tip" && this.checkbool === true) {
             alert("确认要注册吗?");
             this.senddata();
-            
         } else {
             alert("请填写用户名邮箱和密码并同意使用条款")
         }
@@ -63,28 +62,27 @@
     //提交数据到数据库
     Register.prototype.senddata = function () {
         this.data = {
-            username : this.kurumi[0].value,
-            email : this.kurumi[1].value,
-            password : this.kurumi[2].value
+            username: this.kurumi[0].value,
+            email: this.kurumi[1].value,
+            password: this.kurumi[2].value
         }
         $.ajax({
             url: this.url,
             data: this.data,
             type: "POST",
             dataType: "json",
-            success : function(res){
-                console.log(res)
-                if(res.stateCode === "用户名重复"){
+            success: function (res) {
+                if (res.stateCode === "用户名重复") {
                     alert("用户名重复");
                     $(".userrepeat").addClass(" active");
-                } else if(res.stateCode === "邮箱重复"){
+                } else if (res.stateCode === "邮箱重复") {
                     alert("该邮箱已经被注册");
                     $(".emailrepeat").addClass(" active");
                 } else {
                     alert("注册成功");
-                    window.location.href = './register2.html';
+                    window.location.href = "./register2.html#" + email.value;
                 };
-          }
+            }
         });
     }
 }

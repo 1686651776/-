@@ -6,11 +6,9 @@
       # 1. 获取数据;
 
       $username = $_POST["username"];
-      $email = $_POST["email"];
       $password = $_POST["password"];
       
-
-      if(!$username || !$password || !$email){
+      if(!$username || !$password){
             die('{"state":"error","errorType":"参数不全","stateCode":"3"}');
       }
 
@@ -26,7 +24,7 @@
 
       while($row = mysql_fetch_array($select_res)){
             // 有没有该帐号;
-            if($row["username"] === $username || $row["email"] === $email){
+            if($row["username"] === $username || $row["email"] === $username){
                   // 判定密码是否正确;
                   if($row["password"] === md5($password)){
                         die('{"state":"success","errorType":"登录成功","stateCode":"1"}');
@@ -34,7 +32,7 @@
                         die('{"state":"success","errorType":"密码错误","stateCode":"2"}');
                   }
             } else {
-                  die('{"state":"success","errorType":"没用该帐号","stateCode":"2"}');
+                  die('{"state":"success","errorType":"没有该帐号","stateCode":"3"}');
             }
       }
       
