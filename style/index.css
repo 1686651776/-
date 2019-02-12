@@ -1,3 +1,299 @@
-body{
-    background: orange;
+body,html{
+    height: 100%;
 }
+body{
+    background-color: #353558;
+}
+body.active{
+    overflow: hidden;
+}
+.top-search{
+    width: 100%;
+    opacity: 0;
+    height: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    opacity: 0;
+}
+.top-search.active{
+    height: 100%;
+    opacity: 1;
+}
+.top-search .search-box{
+    width: 1180px;
+    height: 340px;
+    margin-top: -80px;
+}
+.top-search .search-box.active{
+    opacity: 1;
+}
+.top-search .search-box .search-close{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 24px;
+}
+.top-search .search-box .search-input{
+    height: 80px;
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    box-shadow: inset 0 -1px 0 0 #ffffff;
+    align-items: center;
+}
+.top-search .search-box .search-input input{
+    height: 80px;
+    background: none;
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    font-size: 40px;
+    line-height: 1;
+    text-align: left;
+    color: #ffffff;
+}
+.top-search .search-box .search-input .search-button{
+    display: block;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+    margin-top: 15px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 24px;
+}
+.top-search .search-box .search-buttons .advertisement{
+    width: 380px;
+    height: 90px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    float: left;
+    display: flex;
+    
+}
+.top-search .search-box .search-buttons .advertisement a{
+    display: inline-block;
+    width: 80px;
+    height: 90px;
+    margin-right: 10px;
+}
+.top-search .search-box .search-buttons .advertisement a img{
+    width: 100%;
+    height: 100%;
+}
+.top-search .search-box .search-buttons .advertisement .text{
+    display: flex;
+    flex-direction: column;
+}
+.top-search .search-box .search-buttons .advertisement .text .title{
+    margin-bottom: 4px;
+    font-size: 14px;
+    text-align: left;
+    color: #ffffff;
+}
+.top-search .search-box .search-buttons .advertisement .text .subtitle{
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: left;
+    color: #ffffff;
+}
+.top-search .search-box .search-buttons .advertisement .text .content{
+    width: 264px;
+    word-break: break-all;
+    font-size: 12px;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.5);
+}
+.wrap{
+    background: #fff7f7;
+    height: 100%;
+}
+.brief{
+    width: 100%;
+    height: 1300px;
+    background: url(../images/beijing.svg) no-repeat;
+    background-size: 4000px 1200px;
+    background-position: top center;
+    position: relative;
+}
+.brief .header{
+    height: 80px;
+    width: 100%!important;
+    min-width: 1350px;
+    padding:20px 40px 20px 39px;
+    background-color: transparent;
+    transition: background-color .2s;
+    position: relative;
+}
+.brief .header a img{
+    height: 40px;
+}
+.brief .header .switch{
+    width: 74px;
+    height: 28px;
+    display: inline-block;
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 26px;
+    border: 1px solid rgb(227, 231, 227);
+    border-radius: 4px;
+    position: absolute;
+    top: 25px;
+    left: 160px;
+}
+.brief .header .switch:hover{
+    border-color: rgb(163, 163, 163);
+}
+.brief .header .moe-search-input{
+    position: absolute;
+    z-index: 120;
+    top: 20px;
+    left: 50%;
+    margin-left: -190px;
+    width: 380px;
+    height: 40px;
+    padding-left: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    background-image: url(../images/search.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 -1px 0 0 #3a3a5e;
+}
+.brief .header ul{
+    float: right;
+}
+.brief .header ul li{
+    float: left;
+}
+.brief .header ul li a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin:10px 0 0 40px;
+}
+.brief .header ul li a i{
+    font-size: 22px;
+    color: #000;
+}
+.brief .header ul li a:hover i{
+    color: orange;
+}
+.brief .header .userlogin::before{
+    display: inline-block;
+    content: '';
+    width: 27px;
+    height: 13px;
+    background-image: url(../images/userbefore.svg);
+    position: absolute;
+    top: -13px;
+    right: 15px;
+    color: #fafafa;
+}
+.brief .header .userlogin{
+    width: 154px;
+    height: 218px;
+    position: absolute;
+    background-color: #fafafa;
+    box-shadow: 0 24px 32px 4px rgba(26, 34, 61, 0.12), 0 8px 12px 2px rgba(26, 34, 61, 0.08);
+    border-radius: 4px;
+    top: 72px;
+    right: 23px;
+    border: 1px solid #eaebef;
+    padding: 8px 8px 0 8px;
+    opacity: 0;
+}
+.brief .header .userlogin p{
+    height: 40px;
+    margin-bottom: 12px;
+}
+.brief .header .userlogin p a{
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.brief .header .userlogin p:nth-child(1) a{
+    color: #fff;
+    background: #ff7062;
+    border:none;
+}
+.brief .header .userlogin p:nth-child(1) a:hover{
+    background: #f14f46;
+}
+.brief .header .userlogin p:nth-child(2) a{
+    color: #fff;
+    background: #f31b08d7;
+    border:none;
+}
+.brief .header .userlogin p:nth-child(2) a:hover{
+    background: #bd1007e1;
+}
+.brief .header .userlogin p:nth-child(3) a{
+    color: rgb(136, 133, 133);
+    background: #fff;
+}
+.brief .header .userlogin p:nth-child(3) a:hover{
+    background: #faf9f9e1;
+}
+.brief .header .userlogin p:nth-child(4) a{
+    color: rgb(136, 133, 133);
+    background: #fff;
+}
+.brief .header .userlogin p:nth-child(4) a:hover{
+    background: #faf9f9e1;
+}
+.brief .banner-wrap{
+    width: 1180px;
+    height: 540px;
+    position: absolute;
+    top: 12%;
+    left: 12%;
+}
+.brief .banner-wrap .banner-left{
+    width: 400px;
+    height: 540px;
+    background: #ff7062;
+    float: left;
+}
+.brief .banner-wrap .banner-right{
+    width: 780px;
+    height: 540px;
+    background: orange;
+    float: right;
+    position: relative;
+}
+.brief .banner-wrap .banner-right div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 540px;
+    overflow: hidden;
+}
+.brief .banner-wrap .banner-right div.active{
+    width: 780px;
+    transition: .5s;
+}
+
+

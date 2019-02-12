@@ -1,0 +1,127 @@
+/* 加载 */
+.iframe-loading {
+  background: #272822;
+  color: #fff;
+  animation-name: shake-slow;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  display: inline-block;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  width: 160px;
+  padding: 8px 16px;
+  margin-left: -80px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.5);
+  transition:opacity .5s;
+}
+.iframe-loading.fade-out {
+  opacity: 0;
+}
+@keyframes shake-slow {
+   2%{transform:translate(-2px,10px) rotate( 0.5deg)}
+   6%{transform:translate( 0px,-2px) rotate(-2.5deg)}
+  10%{transform:translate(-4px,-3px) rotate( 1.5deg)}
+  14%{transform:translate( 3px,10px) rotate( 1.5deg)}
+  18%{transform:translate(-9px, 2px) rotate( 0.5deg)}
+  22%{transform:translate(-8px, 4px) rotate(-2.5deg)}
+  26%{transform:translate(-3px,-9px) rotate(-2.5deg)}
+  30%{transform:translate(-2px,10px) rotate( 0.5deg)}
+  34%{transform:translate( 3px,-6px) rotate(-1.5deg)}
+  38%{transform:translate( 8px,10px) rotate( 3.5deg)}
+  42%{transform:translate(-7px, 8px) rotate( 1.5deg)}
+  46%{transform:translate(-4px, 8px) rotate( 3.5deg)}
+  50%{transform:translate(10px, 5px) rotate(-2.5deg)}
+  54%{transform:translate( 5px,-7px) rotate(-1.5deg)}
+  58%{transform:translate(-3px, 8px) rotate( 2.5deg)}
+  62%{transform:translate(-8px, 6px) rotate(-2.5deg)}
+  66%{transform:translate(-2px,-1px) rotate( 3.5deg)}
+  70%{transform:translate(-5px, 6px) rotate(-0.5deg)}
+  74%{transform:translate( 5px, 0px) rotate( 3.5deg)}
+  78%{transform:translate(-3px,-5px) rotate( 1.5deg)}
+  82%{transform:translate( 7px, 6px) rotate( 3.5deg)}
+  86%{transform:translate(-5px,-6px) rotate( 1.5deg)}
+  90%{transform:translate( 7px, 3px) rotate(-0.5deg)}
+  94%{transform:translate(10px,10px) rotate(-1.5deg)}
+  98%{transform:translate(-2px, 1px) rotate( 1.5deg)}
+  0%,100%{transform:translate(0,0) rotate(0)}
+}
+/* 显示动画 */
+.site-fade-leave-show {
+	animation: swing-out-top-bck-show .9s cubic-bezier(.6,-.28,.735,.045) both;
+	-webkit-animation: swing-out-top-bck-show .9s cubic-bezier(.6,-.28,.735,.045) both;
+}
+@-webkit-keyframes swing-out-top-bck-show {
+	0% {
+		-webkit-transform: rotateX(80deg);
+		transform: rotateX(80deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+    opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotateX(0);
+		transform: rotateX(0);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1;
+	}
+}
+@keyframes swing-out-top-bck-show {
+	0% {
+		-webkit-transform: rotateX(80deg);
+		transform: rotateX(80deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 0
+	}
+	100% {
+		-webkit-transform: rotateX(0);
+		transform: rotateX(0);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1
+	}
+}
+/* 隐藏动画 */
+.site-fade-leave-hide {
+	animation: swing-out-top-bck-hide .9s cubic-bezier(.6,-.28,.735,.045) both;
+	-webkit-animation: swing-out-top-bck-hide .9s cubic-bezier(.6,-.28,.735,.045) both;
+}
+@-webkit-keyframes swing-out-top-bck-hide {
+	0% {
+		-webkit-transform: rotateX(0);
+		transform: rotateX(0);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1
+	}
+	100% {
+		-webkit-transform: rotateX(80deg);
+		transform: rotateX(80deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 0
+	}
+}
+@keyframes swing-out-top-bck-hide {
+	0% {
+		-webkit-transform: rotateX(0);
+		transform: rotateX(0);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1
+	}
+	100% {
+		-webkit-transform: rotateX(80deg);
+		transform: rotateX(80deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 0
+	}
+}
+
+
