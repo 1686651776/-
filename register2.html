@@ -37,7 +37,6 @@
             var email = document.querySelector(".email");
             email.innerHTML = location.hash.replace("#","");
             var btn = document.getElementsByTagName("button");
-            console.log(btn[0])
             btn[0].addEventListener("click",start);
             function start () {
                 window.location.href = "./login.html";

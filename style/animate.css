@@ -51,8 +51,8 @@
 }
 /* 显示动画 */
 .site-fade-leave-show {
-	animation: swing-out-top-bck-show .9s cubic-bezier(.6,-.28,.735,.045) both;
-	-webkit-animation: swing-out-top-bck-show .9s cubic-bezier(.6,-.28,.735,.045) both;
+	animation: swing-out-top-bck-show .4s cubic-bezier(.6,-.28,.735,.045) both;
+	-webkit-animation: swing-out-top-bck-show .4s cubic-bezier(.6,-.28,.735,.045) both;
 }
 @-webkit-keyframes swing-out-top-bck-show {
 	0% {
@@ -88,8 +88,8 @@
 }
 /* 隐藏动画 */
 .site-fade-leave-hide {
-	animation: swing-out-top-bck-hide .9s cubic-bezier(.6,-.28,.735,.045) both;
-	-webkit-animation: swing-out-top-bck-hide .9s cubic-bezier(.6,-.28,.735,.045) both;
+	animation: swing-out-top-bck-hide .7s cubic-bezier(.6,-.28,.735,.045) both;
+	-webkit-animation: swing-out-top-bck-hide .7s cubic-bezier(.6,-.28,.735,.045) both;
 }
 @-webkit-keyframes swing-out-top-bck-hide {
 	0% {

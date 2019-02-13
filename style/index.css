@@ -9,9 +9,7 @@ body.active{
 }
 .top-search{
     width: 100%;
-    opacity: 0;
     height: 0;
-    z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,22 +119,24 @@ body.active{
 .wrap{
     background: #fff7f7;
     height: 100%;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+.wrap.active{
+    transform: perspective(600px) translate3d(0,-166px,-6px) rotateX(8deg);
+    opacity: 0.3;
 }
 .brief{
-    width: 100%;
-    height: 1300px;
-    background: url(../images/beijing.svg) no-repeat;
+    background: #fff7f7 url(../images/beijing.svg) no-repeat;
     background-size: 4000px 1200px;
     background-position: top center;
     position: relative;
 }
 .brief .header{
     height: 80px;
-    width: 100%!important;
+    width: 100%;
     min-width: 1350px;
     padding:20px 40px 20px 39px;
-    background-color: transparent;
-    transition: background-color .2s;
     position: relative;
 }
 .brief .header a img{
@@ -160,7 +160,6 @@ body.active{
 }
 .brief .header .moe-search-input{
     position: absolute;
-    z-index: 120;
     top: 20px;
     left: 50%;
     margin-left: -190px;
@@ -219,6 +218,7 @@ body.active{
     border: 1px solid #eaebef;
     padding: 8px 8px 0 8px;
     opacity: 0;
+    z-index: 2;
 }
 .brief .header .userlogin p{
     height: 40px;
@@ -266,34 +266,308 @@ body.active{
 .brief .banner-wrap{
     width: 1180px;
     height: 540px;
+    position: relative;
+    margin: 80px auto;
+    overflow: hidden;
+}
+.brief .banner-wrap .previous,.brief .banner-wrap .next{
     position: absolute;
-    top: 12%;
-    left: 12%;
+    top: 246px;
+    width: 32px;
+    height: 32px;
+    padding: 7px 7px 8px 9px;
+    border-radius: 16px;
+    border: solid 1px rgba(58,58,94,.2);
+    color: #3a3a5e;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.brief .banner-wrap .previous{
+    left: -80px;
+}
+.brief .banner-wrap .next{
+    right: -80px;
+}
+.brief .banner-wrap .previous:hover,.brief .banner-wrap .next:hover{
+    background: #3a3a5e;
+    color: #fff;
 }
 .brief .banner-wrap .banner-left{
     width: 400px;
     height: 540px;
-    background: #ff7062;
     float: left;
+    position: relative;
+}
+.brief .banner-wrap .banner-left .banner-text{
+    width: 400px;
+    height: 414px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+.brief .banner-wrap .banner-left .banner-text.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.brief .banner-wrap .banner-left .banner-text .banner-text-title{
+    height: 28px;
+    padding: 64px 0 24px 0;
+    font-size: 20px;
+    text-align: left;
+    color: rgba(58,58,94,.5);
+}
+.brief .banner-wrap .banner-left .banner-text .banner-text-main{
+    width: 400px;
+    height: 230px;
+    overflow: hidden;
+    padding-top: 24px;
+    font-size: 44px;
+    line-height: 1.42;
+    text-align: left;
+    color: #3a3a5e;
+}
+.brief .banner-wrap .banner-left .banner-text .banner-text-details{
+    display: block;
+    width: 240px;
+    height: 48px;
+    padding: 0 24px;
+    margin-top: 48px;
+    line-height: 48px;
+    vertical-align: middle;
+    border-radius: 4px;
+    border: solid 1px #3a3a5e;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    color: #3a3a5e;
+    transition: .2s;
+}
+.brief .banner-wrap .banner-left .banner-text .banner-text-details span{
+    float: right;
+    font-size: 24px;
+}
+.brief .banner-wrap .banner-left .banner-text .banner-text-details:hover{
+    background: #ff6a5b;
+    color: #fff;
+    border: 1px solid #ff6a5b;
+}
+.brief .banner-wrap .banner-left .banner-index{
+    position: absolute;
+    top: 478px;
+    width: 300px;
+}
+.brief .banner-wrap .banner-left .banner-index span{
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    float: left;
+    border-radius: 4px;
+    background-color: rgba(58,58,94,.14);
+    cursor: pointer;
+}
+.brief .banner-wrap .banner-left .banner-index span.active{
+    background: #3a3a5e;
 }
 .brief .banner-wrap .banner-right{
     width: 780px;
     height: 540px;
-    background: orange;
     float: right;
     position: relative;
+    border-radius: 8px;
+    box-shadow: 0 12px 24px 4px #ffdedb;
 }
 .brief .banner-wrap .banner-right div{
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 780px;
     height: 540px;
     overflow: hidden;
-}
-.brief .banner-wrap .banner-right div.active{
-    width: 780px;
+    opacity: 0;
     transition: .5s;
 }
-
-
+.brief .banner-wrap .banner-right div.active{
+    opacity: 1;
+    z-index: 1;
+}
+.brief .banner-wrap .banner-right div a{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 780px;
+    height: 540px;
+    border-radius: 8px;
+}
+.brief .banner-wrap .banner-right div:nth-child(1) a{
+    background: url(../images/banner1.png) no-repeat;
+    background-size: 100% 100%;
+}
+.brief .banner-wrap .banner-right div:nth-child(2) a{
+    background: url(../images/banner2.png) no-repeat;
+    background-size: 100% 100%;
+}
+.brief .banner-wrap .banner-right div:nth-child(3) a{
+    background: url(../images/banner3.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.brief .banner-wrap .banner-right div:nth-child(4) a{
+    background: url(../images/banner4.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.brief .banner-wrap .banner-right div:nth-child(5) a{
+    background: url(../images/banner5.png) no-repeat;
+    background-size: 100% 100%;
+}
+.brief .banner-wrap .banner-right div:nth-child(6) a{
+    background: url(../images/banner6.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.brief .main-hot{
+    width: 1180px;
+    height: 280px;
+    margin: 0 auto;
+}
+.brief .main-hot a{
+    width: 380px;
+    height: 280px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    transition: .4s;
+    transform-style: preserve-3d; 
+    box-shadow: 0 12px 24px 2px rgba(255,222,219,.3);   
+}
+.brief .main-hot a:hover{
+    box-shadow: 0 12px 24px 6px rgb(255, 224, 222);
+    transform: translateY(-6px);
+}
+.brief .main-hot a:nth-child(3){
+    margin-right: 0;
+}
+.brief .main-hot a .img{
+    width: 360px;
+    height: 180px;
+    margin-bottom: 10px;
+    background-size: 100% 100%;
+}
+.brief .main-hot a:nth-child(1) .img{
+    background: url(../images/hotimg3.png) no-repeat;
+}
+.brief .main-hot a:nth-child(2) .img{
+    background: url(../images/hotimg2.png) no-repeat;
+}
+.brief .main-hot a:nth-child(3) .img{
+    background: url(../images/hotimg1.png) no-repeat;
+}
+.brief .main-hot a .text{
+    width: 360px;
+    height: 68px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    color: #3a3a5e;
+    text-align: center;
+}
+.brief .notice{
+    width: 1180px;
+    height: 160px;
+    display: table;
+    margin: 80px auto 0 auto;
+    border-top: 1px solid rgba(58,58,94,.15);
+    border-bottom: 1px solid rgba(58,58,94,.15);
+}
+.brief .notice .notice-main{
+    position: relative;
+    width: 20%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.brief .notice .notice-main:nth-child(2){
+    cursor: pointer;
+}
+.brief .notice .notice-main .notice-icon{
+    position: relative;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+}
+.brief .notice .notice-main .notice-text{
+    height: 40px;
+    max-width: 145px;
+    margin: 16px auto 0 auto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.43;
+    text-align: center;
+    color: #3a3a5e;
+}
+.brief .notice .notice-main:first-child .calendar{
+    display: inline-flex;
+}
+.brief .notice .notice-main:first-child .calendar .calendar-left .day{
+    font-size: 80px;
+    font-weight: 700;
+    line-height: .86;
+    text-align: center;
+    color: #3a3a5e;
+}
+.brief .notice .notice-main:first-child .calendar .calendar-left .yearmonth{
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #3a3a5e;
+}
+.brief .notice .notice-main:first-child .calendar .calendar-right .week-name{
+    display: inline-block;
+    margin: 3px 0 0 2px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.33;
+    color: #3a3a5e;
+}
+.brief .notice-banner{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #353558;
+    transition: .5s;
+}
+.brief .notice-banner.show{
+    height: 324px; 
+}
+.brief .notice-banner .notice-main{
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 32px 0;
+    position: relative;
+}
+.brief .notice-banner .notice-main .previous,.brief .notice-banner .notice-main .next{
+    position: absolute;
+    top: 145px;
+    width: 32px;
+    height: 32px;
+    padding: 7px 7px 8px 9px;
+    border-radius: 16px;
+    border: solid 1px rgba(255,255,255,.2);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.brief .notice-banner .notice-main .previous{
+    left: 100px;
+}
+.brief .notice-banner .notice-main .next{
+    right: 100px;
+}
