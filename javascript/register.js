@@ -43,7 +43,6 @@
     Register.prototype.confirm = function (index) {
         if (this.kotori[index].value === this.kurumi[index + 1].value) {
             $(this.Tip[index]).removeClass(" active");
-            $()
         } else {
             $(this.Tip[index]).addClass(" active");
         }
