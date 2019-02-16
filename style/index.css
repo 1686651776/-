@@ -154,6 +154,7 @@ body.active{
     position: absolute;
     top: 25px;
     left: 160px;
+    color: rgb(116, 115, 113);
 }
 .brief .header .switch:hover{
     border-color: rgb(163, 163, 163);
@@ -179,6 +180,10 @@ body.active{
 .brief .header ul{
     float: right;
 }
+.brief .header ul::before{
+    content: "";
+    display: table;
+}
 .brief .header ul li{
     float: left;
 }
@@ -188,12 +193,16 @@ body.active{
     height: 24px;
     margin:10px 0 0 40px;
 }
-.brief .header ul li a i{
-    font-size: 22px;
-    color: #000;
+.brief .header ul li a svg{
+    width: 24px;
+    height: 24px;
+    fill: #3a3a5e;
+    line-height: 16px;
+    vertical-align: sub;
+    display: inline-block;
 }
-.brief .header ul li a:hover i{
-    color: orange;
+.brief .header ul li a:hover svg{
+    fill: rgb(255, 145, 0);
 }
 .brief .header .userlogin::before{
     display: inline-block;

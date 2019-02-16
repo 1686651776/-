@@ -385,7 +385,7 @@
             },
         }
     }
-    //初始化数
+    //初始化函数
     Index.prototype.initialization = function () {
         $(function () {
             $(".iframe-loading").css("opacity", "0");
